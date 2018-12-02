@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <!-- tensorflow -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"> </script>
+  <script src="script.js"></script>
+
+  <style>
+    .flex-container {
+      display: flex;
+    }
+
+    .flex-container>p {
+      width: 100%;
+    }
+  </style>
+</head>
+
+
+<body onload="retreiveData()">
+  <h1>Color predictor:</h1>
+  <p>You can test the data while the model is learning, the page dislpays from how many epochs it has learned. The predictions get better over time.</p>
+  <p>To add more data click <a href="AddMoreTrainingData.html">here</a> </p>
+  <div class="flex-container">
+
+    <p>
+      Red:
+      <span id="rvalue">0</span>
+      <input type="range" value="0" min="0" max="255" id="r" onchange="predict()">
+    </p>
+    <p>
+      Green:
+      <span id="gvalue">0</span>
+      <input type="range" value="0" min="0" max="255" id="g" onchange="predict()">
+    </p>
+    <p>
+      Blue:
+      <span id="bvalue">0</span>
+      <input type="range" value="0" min="0" max="255" id="b" onchange="predict()">
+    </p>
+
+  </div>
+
+  <div id="preview" style="height: 400px; width: 400px; border: solid 2px black">
+  </div>
+  <div id="prediction" style="height: 1em; width: 400px; border: solid 2px black">
+  Color:</div>
+  <div id="animationDisp" style="height: 1em; width: 400px; border: solid 2px black">
+  </div>
+
+  <h1>Data used:</h1>
+  <div id="output_done" style="width: 400px; border: solid 2px black">
+
+  </div>
+</body>
+
+</html>

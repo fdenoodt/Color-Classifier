@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <!-- tensorflow -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"> </script>
+  <script src="script.js"></script>
+</head>
+
+<body onload="colorDiv()">
+  <!-- temp hidden -->
+  <div>
+    <h1>
+      Here you can create more testing data. Most of the testing testing data comes from the json file, from the Mr. Shiffman.
+    </h1>
+    <div id="output" style="height: 400px; width: 400px; border: solid 2px black">
+
+    </div>
+    <button onclick="chooseColor('red')">red</button>
+    <button onclick="chooseColor('orange')">orange</button>
+    <button onclick="chooseColor('yellow')">yellow</button>
+    <button onclick="chooseColor('green')">green</button>
+    <button onclick="chooseColor('blue')">blue</button>
+    <button onclick="chooseColor('purple')">purple</button>
+    <button onclick="chooseColor('brown')">brown</button>
+    <button onclick="chooseColor('gray')">gray</button>
+  </div>
+
+  <div id="output_done" style="height: 400px; width: 400px; border: solid 2px black">
+
+  </div>
+</body>
+
+</html>
